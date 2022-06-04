@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://ux.ed.team/css/styles.css?201803301710">
+    <title>ED Cursos</title>
+    <!-- <style>
+        .formCursos {
+            display: none;
+        }
+        .formUsuario {
+            display: none;
+        }
+    </style> -->
+</head>
+<body>
+    <div class="ed-grid">
+        <h1>EDcursos</h1>
+    </div>
+    <div id="eleccionCrear" class="ed-grid eleccion-crear">
+        <h2>Bienvenido, ¿Que queres hacer?</h2>
+        <input id="crearCurso" value="Crear un Curso" class="button" type="button">
+        <input id="crearUsuario" value="Crear un Usuario" class="button" type="button">
+    </div>
+    <form id="formCursos" class="formCursos">
+        <div class="ed-grid m-grid-4">
+            <div class="form-item">
+                <label>
+                    Nombre del Curso
+                    <input type="text" name="nombreCurso" required>
+                </label>
+            </div>
+            <div class="form-item">
+                <label>
+                    Poster
+                    <input type="text" name="posterCurso" required>
+                </label>
+            </div>
+            <div class="form-item">
+                <label>
+                    Clases
+                    <input type="number" min="1" name="clasesCurso" required>
+                </label>
+            </div>
+            <div class="form-item m-py-3">
+                <input class="button" type="submit" value="Crear Curso">
+                <input class="button ghost" id="bttf1" type="button" value="Volver Atras">
+            </div>
+        </div>
+    </form>
+    <form id="formUsuario" class="formUsuario">
+        <div class="ed-grid m-grid-3">
+            <div class="form-item">
+                <label>
+                    Nombre
+                    <input type="text" name="nombreUsuario" required>
+                </label>
+            </div>
+            <div class="form-item">
+                <label>
+                    Apellido
+                    <input type="text" name="apellidoUsuario" required>
+                </label>
+            </div>
+            <div class="form-item">
+                <label>
+                    E-mail
+                    <input type="email" name="correoUsuario" required>
+                </label>
+            </div>
+            <div class="form-item">
+                <label>
+                    ¿Esta usted activo en la plataforma?
+                    <input type="radio" name="actividadUsuario" value=true checked required>Si
+                    <input type="radio" name="actividadUsuario" value=false required>No
+                </label>
+            </div>
+            <div class="form-item">
+                <label>
+                    ¿Es usted Profesor o Alumno?
+                    <select class="eleccionPerfil" name="tipoUsuario" size="2" required>
+                        <option value="Profesor" id="idProfesor">Profesor</option>
+                        <option value="Alumno" id="idAlumno">Alumno</option>
+                    </select>
+                </label>
+                <label>
+                    Nota
+                    <input type="number" name="calificacionProfesor" id="calificacionProfesor" min="1" max="10" required>
+                </label>
+            </div>
+            <div class="form-item">
+                <label>
+                    Cursos
+                    <select class="opcionCursos" name="cursosUsuario" required multiple size="5">
+                        <option name="opcion" value="HTML desde Cero" selected>HTML desde Cero</option>
+                        <option name="opcion" value="CSS desde Cero">CSS desde Cero</option>
+                        <option name="opcion" value="JS desde Cero" selected>JS desde Cero</option>
+                        <option name="opcion" value="POO con JS">POO con JS</option>
+                        <option name="opcion" value="React desde Cero">React desde Cero</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-item m-py-3">
+                <input class="button" type="submit" value="Crear Usuario">
+                <input class="button ghost" id="bttf2" type="button" value="Volver Atras">
+            </div>
+        </div>
+    </form>
+    <!-- El siguiente div es para que se alojen los cursos -->
+    <div id="cursos" class="ed-grid m-grid-2">
+    </div>
+    <div id="usuarios" class="ed-grid m-grid-2">
+    </div>
+    <script type="module" src="./scripts/index.js"></script>
+</body>
+</html>
